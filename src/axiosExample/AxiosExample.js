@@ -6,11 +6,13 @@ import {fetchGroups} from "../classes/group/GroupService";
 
 
 const AxiosExample = () => {
+    let key = 'groups';
+    let url = null;
     const {
         data: groupsResponse,
         isLoading: groupsLoading,
         isError: groupsError
-    } = useQuery('groups', fetchGroups);
+    } = useQuery([key, url], () => fetchGroups(url));
     const {
         data: usersResponse,
         isLoading: usersLoading,

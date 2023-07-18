@@ -2,7 +2,7 @@ import axios from "axios";
 import {User, UsersResponse} from "./User";
 
 const axiosInstance = axios.create({
-    baseURL: "http://nesimi.local:8000/api/v1"
+    baseURL: "http://localhost:8000/api/v1"
 });
 export const fetchUsers = async () => {
     try {

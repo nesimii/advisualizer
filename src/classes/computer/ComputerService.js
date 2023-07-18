@@ -2,7 +2,7 @@ import axios from "axios";
 import {Computer, ComputersResponse} from "./Computer";
 
 const axiosInstance = axios.create({
-    baseURL: "http://nesimi.local:8000/api/v1"
+    baseURL: "http://localhost:8000/api/v1"
 });
 export const fetchComputers = async () => {
     try {

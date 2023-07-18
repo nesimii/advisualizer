@@ -1,12 +1,14 @@
 import axios from "axios";
 import {Group, GroupsResponse} from "./Group";
 
-const axiosInstance = axios.create({
-    baseURL: "http://nesimi.local:8000/api/v1"
-});
-export const fetchGroups = async () => {
+export const fetchGroups = async (url) => {
     try {
-        return await axiosInstance.get("groups/", {params: {format: "json"}})
+        let baseUrl = "http://localhost:8000/api/v1/groups/";
+        if (url !== null) {
+            baseUrl = url;
+        }
+
+        return await axios.get(baseUrl, {params: {format: "json"}})
             .then(response => {
                 const groupsData = response.data;
                 const parsedGroups = groupsData.results.map(groupData => new Group(
