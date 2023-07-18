@@ -38,8 +38,8 @@ const AxiosExample = () => {
             <ul>
 
                 {groupsResponse ? (
-                    groupsResponse.groupList.length > 0 ? (
-                        groupsResponse.groupList.map((group) => <li key={group.id}>{group.distinguishedName}</li>)
+                    groupsResponse.dataList.length > 0 ? (
+                        groupsResponse.dataList.map((group) => <li key={group.id}>{group.distinguishedName}</li>)
                     ) : (
                         <li>No groups found.</li>
                     )
@@ -50,8 +50,8 @@ const AxiosExample = () => {
             <h3>User List</h3>
             <ul>
                 {usersResponse ? (
-                    usersResponse.userList.length > 0 ? (
-                        usersResponse.userList.map((user) => <li key={user.id}>{user.distinguishedName}</li>)
+                    usersResponse.dataList.length > 0 ? (
+                        usersResponse.dataList.map((user) => <li key={user.id}>{user.distinguishedName}</li>)
                     ) : (
                         <li>No users found.</li>
                     )
@@ -62,8 +62,8 @@ const AxiosExample = () => {
             <h3>Computer List</h3>
             <ul>
                 {computersResponse ? (
-                    computersResponse.computerList.length > 0 ? (
-                        computersResponse.computerList.map((computer) => <li
+                    computersResponse.dataList.length > 0 ? (
+                        computersResponse.dataList.map((computer) => <li
                             key={computer.id}>{computer.distinguishedName}</li>)
                     ) : (
                         <li>No computers found.</li>

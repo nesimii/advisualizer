@@ -16,6 +16,6 @@ export class GroupsResponse {
         this.count = count;
         this.next = next;
         this.previous = previous;
-        this.groupList = groupList;
+        this.dataList = groupList;
     }
 }

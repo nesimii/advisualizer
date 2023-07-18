@@ -27,6 +27,6 @@ export class UsersResponse {
         this.count = count;
         this.next = next;
         this.previous = previous;
-        this.userList = userList;
+        this.dataList = userList;
     }
 }
